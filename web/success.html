@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanks! Preparing your download — Claude Code Power Pack</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header class="hero">
+    <h1 id="title">Verifying your payment…</h1>
+    <p class="sub" id="sub">This takes a second.</p>
+    <a class="buy" id="downloadBtn" style="display:none" href="#">Download Claude Code Power Pack →</a>
+    <p class="fineprint" id="fineprint"></p>
+  </header>
+</main>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const sessionId = params.get('session_id');
+  const titleEl = document.getElementById('title');
+  const subEl = document.getElementById('sub');
+  const btn = document.getElementById('downloadBtn');
+  const fine = document.getElementById('fineprint');
+
+  if (!sessionId) {
+    titleEl.textContent = "Missing payment confirmation";
+    subEl.textContent = "We couldn't find a session ID in the URL. If you just paid, check your Stripe receipt email for a download link, or reply to it for help.";
+  } else {
+    const downloadUrl = '/api/verify?session_id=' + encodeURIComponent(sessionId);
+    fetch(downloadUrl, { method: 'GET' })
+      .then((res) => {
+        if (res.ok) {
+          titleEl.textContent = "You're all set!";
+          subEl.textContent = "Thanks for grabbing the pack.";
+          btn.href = downloadUrl;
+          btn.style.display = 'inline-block';
+          fine.textContent = "Unzip it, copy the skills/ folders into .claude/skills/, and check README.md for the rest.";
+        } else if (res.status === 402) {
+          titleEl.textContent = "Payment not confirmed yet";
+          subEl.textContent = "Give it a moment and refresh this page. If this persists, reply to your Stripe receipt email and we'll send it manually.";
+        } else {
+          titleEl.textContent = "Couldn't verify that session";
+          subEl.textContent = "Reply to your Stripe receipt email and we'll send the download directly.";
+        }
+      })
+      .catch(() => {
+        titleEl.textContent = "Couldn't reach the server";
+        subEl.textContent = "Reply to your Stripe receipt email and we'll send the download directly.";
+      });
+  }
+</script>
+</body>
+</html>

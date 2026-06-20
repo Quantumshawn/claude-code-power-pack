@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(go build *)",
+      "Bash(go test *)",
+      "Bash(go vet *)",
+      "Bash(go mod tidy)",
+      "Bash(go run *)",
+      "Bash(gofmt *)",
+      "Bash(golangci-lint run *)",
+      "Bash(git status)",
+      "Bash(git diff)",
+      "Bash(git diff --staged)",
+      "Bash(git log *)",
+      "Bash(git show *)",
+      "Bash(git branch)",
+      "Bash(git add *)",
+      "Read(**)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(**/secrets/**)",
+      "Read(**/*.pem)"
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code Power Pack — Skills, Hooks & Multi-Agent Workflows</title>
+<meta name="description" content="6 custom skills, 5 hook recipes, 3 multi-agent workflow scripts, and permission templates for Claude Code. Copy-paste and start using in under 10 minutes.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header class="hero">
+    <p class="kicker">For Claude Code power users</p>
+    <h1>Claude Code Power Pack</h1>
+    <p class="sub">6 custom skills, 5 hook recipes, 3 multi-agent workflows, and permission templates — copy-paste and start using in under 10 minutes.</p>
+    <a class="buy" href="STRIPE_PAYMENT_LINK_PLACEHOLDER">Get it for $19 →</a>
+    <p class="fineprint">Instant download after payment. One-time purchase, no subscription.</p>
+  </header>
+
+  <section class="pitch">
+    <p>If you're using Claude Code daily, you've probably re-typed the same instructions a dozen times — "write a good commit message," "don't pad the PR description," "actually verify the test passes." This pack turns the ones that actually stick into reusable skills, so you stop re-explaining your standards every session.</p>
+  </section>
+
+  <section class="contents">
+    <h2>What's inside</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>6 custom skills</h3>
+        <p>changelog-writer, pr-description, commit-message, test-generator, bug-repro, refactor-planner. Each encodes the actual judgment calls — when to split a commit, when a test tests nothing, when a "refactor" is secretly a behavior change.</p>
+      </div>
+      <div class="card">
+        <h3>5 hook recipes</h3>
+        <p>Auto-format on every edit, block edits to lockfiles/CI config, desktop notifications when Claude needs you, a pre-commit test gate, command audit logging. Copy-paste into <code>.claude/settings.json</code>.</p>
+      </div>
+      <div class="card">
+        <h3>3 multi-agent workflows</h3>
+        <p>Parallel code review with adversarial verification, loop-until-dry bug hunting with a 3-lens judge panel, and a discover→transform→verify migration workflow with worktree isolation.</p>
+      </div>
+      <div class="card">
+        <h3>Permission templates</h3>
+        <p>Sane starting allowlists for Node, Python, and Go projects — instead of a blank <code>.claude/settings.json</code> or an over-broad one.</p>
+      </div>
+      <div class="card">
+        <h3>Cheat sheet</h3>
+        <p>One page covering the permission model, when to reach for a subagent vs. a full workflow, and CLAUDE.md hygiene.</p>
+      </div>
+      <div class="card">
+        <h3>Built from real use</h3>
+        <p>Not a prompt-pack reseller bundle. Every file is something that's actually been used in real projects, not generated to fill out a list.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="example">
+    <h2>One full skill, free, so you can judge the quality</h2>
+    <pre><code>---
+name: commit-message
+description: Write a precise, conventional commit message for the currently staged changes.
+---
+
+# Commit Message Writer
+
+1. Run `git diff --staged`. If nothing is staged, say so.
+2. If the diff contains two unrelated changes, flag it and suggest
+   splitting rather than writing one message that covers both.
+3. Format: &lt;type&gt;(&lt;scope&gt;): &lt;summary&gt;, imperative mood, under 72 chars.
+4. Never write "various fixes" or "misc changes" — if the diff is that
+   scattered, say so and recommend splitting.
+5. Match the repo's existing convention (check git log) over this
+   template if they conflict.</code></pre>
+    <p class="fineprint">Drop that in <code>.claude/skills/commit-message/SKILL.md</code> and it just works. The pack has 5 more like it.</p>
+  </section>
+
+  <footer class="cta">
+    <a class="buy" href="STRIPE_PAYMENT_LINK_PLACEHOLDER">Get the full pack for $19 →</a>
+    <p class="fineprint">Zip download. Personal/team use. Instant, automated delivery after payment.</p>
+  </footer>
+</main>
+</body>
+</html>

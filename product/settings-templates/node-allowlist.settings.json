@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm ci)",
+      "Bash(npm run *)",
+      "Bash(npm test)",
+      "Bash(npm test -- *)",
+      "Bash(npx jest *)",
+      "Bash(npx vitest *)",
+      "Bash(npx eslint *)",
+      "Bash(npx prettier *)",
+      "Bash(npx tsc *)",
+      "Bash(git status)",
+      "Bash(git diff)",
+      "Bash(git diff --staged)",
+      "Bash(git log *)",
+      "Bash(git show *)",
+      "Bash(git branch)",
+      "Bash(git add *)",
+      "Read(**)"
+    ],
+    "deny": [
+      "Bash(npm publish)",
+      "Bash(rm -rf *)",
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(**/secrets/**)"
+    ]
+  }
+}

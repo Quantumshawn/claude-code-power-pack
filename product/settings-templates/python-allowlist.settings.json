@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install *)",
+      "Bash(pip list)",
+      "Bash(pytest *)",
+      "Bash(python -m pytest *)",
+      "Bash(ruff check *)",
+      "Bash(ruff format *)",
+      "Bash(black *)",
+      "Bash(mypy *)",
+      "Bash(git status)",
+      "Bash(git diff)",
+      "Bash(git diff --staged)",
+      "Bash(git log *)",
+      "Bash(git show *)",
+      "Bash(git branch)",
+      "Bash(git add *)",
+      "Read(**)"
+    ],
+    "deny": [
+      "Bash(pip install --index-url *)",
+      "Bash(rm -rf *)",
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(**/secrets/**)",
+      "Read(**/*.pem)"
+    ]
+  }
+}
