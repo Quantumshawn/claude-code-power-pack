@@ -13,9 +13,9 @@ Most people re-explain the same standards to their agent every session: "write a
 Turn those into skills once, stop repeating yourself.
 
 **3/**
-Example — the commit-message skill in full:
+Example — the commit-message skill, in full (screenshot below):
 
-[paste the same SKILL.md snippet from the Reddit post — keep it short, screenshot-able]
+[Attach an image here — screenshot the "One full skill, free" terminal block on https://claude-power-pack.vercel.app/#preview, or screenshot the SKILL.md file directly. Don't paste the code as text — it's well over X's 280-character limit.]
 
 **4/**
 Also in the pack: a multi-agent code review workflow — splits review by dimension (correctness/security/perf) across parallel agents, then adversarially verifies every finding before reporting it. Fewer false positives than one agent reviewing everything.
@@ -23,7 +23,7 @@ Also in the pack: a multi-agent code review workflow — splits review by dimens
 **5/**
 $15, zip download, works with your existing Claude Code install.
 
-[Stripe link]
+https://claude-power-pack.vercel.app/
 
 If you've been deep in Claude Code and have skills/hooks you'd add, reply — genuinely curious what other people have built for their own workflow.
 
