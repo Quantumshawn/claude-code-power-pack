@@ -7,8 +7,8 @@ You already have Stripe, so this is the fastest path: no new account, no approva
 ## 1. Create the Payment Link
 
 1. Log into the Stripe Dashboard → **Payment links** → **+ New**.
-2. Add a product: name `Claude Code Power Pack`, price **$19** one-time (one-time, not subscription).
-   - If you want to test pricing, $15 and $25 are both reasonable for this category — $19 is the sweet spot for an impulse dev-tool purchase.
+2. Add a product: name `Claude Code Power Pack`, price **$15** one-time (one-time, not subscription).
+   - If you want to test pricing, $15 and $25 are both reasonable for this category — $15 is the sweet spot for an impulse dev-tool purchase.
 3. Under "After payment," set it to show a **custom message** (simplest) or redirect to a confirmation page. Custom message text:
    > "Thanks! Check your email for the download link within a few minutes — reply to that email if you don't see it."
 4. Save. Stripe gives you a shareable URL like `buy.stripe.com/xxxxx` — that's the link you post everywhere.

@@ -34,6 +34,6 @@ description: Write a precise, conventional commit message for the currently stag
 
 Drop that in `.claude/skills/commit-message/SKILL.md` and it just works.
 
-I bundled 5 more like it (PR descriptions, test generation, bug repro, refactor planning, changelog writing) plus hook recipes and 3 multi-agent workflow scripts (parallel code review w/ adversarial verification, loop-until-dry bug hunting, a migration workflow) into a pack: [Stripe link] — $19.
+I bundled 5 more like it (PR descriptions, test generation, bug repro, refactor planning, changelog writing) plus hook recipes and 3 multi-agent workflow scripts (parallel code review w/ adversarial verification, loop-until-dry bug hunting, a migration workflow) into a pack: [Stripe link] — $15.
 
 Happy to answer questions about any of the skill design choices in the comments, paid or not.

@@ -22,8 +22,8 @@ Built by someone who uses Claude Code for actual daily work, not a prompt-pack r
 
 **Format:** zip download, works with any Claude Code install. Personal/team use.
 
-**Price:** $19 one-time.
+**Price:** $15 one-time.
 
 ## Short version (for a tweet/listing card)
 
-Claude Code Power Pack: 6 skills, 5 hooks, 3 multi-agent workflows, permission templates. Copy-paste, start using today. $19.
+Claude Code Power Pack: 6 skills, 5 hooks, 3 multi-agent workflows, permission templates. Copy-paste, start using today. $15.

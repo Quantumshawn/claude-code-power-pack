@@ -4,15 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thanks! Preparing your download — Claude Code Power Pack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
+<div class="noise"></div>
+<main id="top">
   <header class="hero">
+    <div class="hero-glow"></div>
+    <div class="status-icon" id="statusIcon">⏳</div>
     <h1 id="title">Verifying your payment…</h1>
     <p class="sub" id="sub">This takes a second.</p>
-    <a class="buy" id="downloadBtn" style="display:none" href="#">Download Claude Code Power Pack →</a>
-    <p class="fineprint" id="fineprint"></p>
+    <div class="hero-actions">
+      <a class="buy buy-large" id="downloadBtn" style="display:none" href="#">Download Claude Code Power Pack →</a>
+    </div>
+    <p class="fineprint center" id="fineprint"></p>
+    <p class="fineprint center muted"><a class="secondary-link" href="/">← Back to homepage</a></p>
   </header>
 </main>
 <script>
@@ -22,8 +31,10 @@
   const subEl = document.getElementById('sub');
   const btn = document.getElementById('downloadBtn');
   const fine = document.getElementById('fineprint');
+  const icon = document.getElementById('statusIcon');
 
   if (!sessionId) {
+    icon.textContent = "⚠";
     titleEl.textContent = "Missing payment confirmation";
     subEl.textContent = "We couldn't find a session ID in the URL. If you just paid, check your Stripe receipt email for a download link, or reply to it for help.";
   } else {
@@ -31,20 +42,24 @@
     fetch(downloadUrl, { method: 'GET' })
       .then((res) => {
         if (res.ok) {
+          icon.textContent = "✓";
           titleEl.textContent = "You're all set!";
           subEl.textContent = "Thanks for grabbing the pack.";
           btn.href = downloadUrl;
-          btn.style.display = 'inline-block';
+          btn.style.display = 'inline-flex';
           fine.textContent = "Unzip it, copy the skills/ folders into .claude/skills/, and check README.md for the rest.";
         } else if (res.status === 402) {
+          icon.textContent = "⏳";
           titleEl.textContent = "Payment not confirmed yet";
           subEl.textContent = "Give it a moment and refresh this page. If this persists, reply to your Stripe receipt email and we'll send it manually.";
         } else {
+          icon.textContent = "⚠";
           titleEl.textContent = "Couldn't verify that session";
           subEl.textContent = "Reply to your Stripe receipt email and we'll send the download directly.";
         }
       })
       .catch(() => {
+        icon.textContent = "⚠";
         titleEl.textContent = "Couldn't reach the server";
         subEl.textContent = "Reply to your Stripe receipt email and we'll send the download directly.";
       });

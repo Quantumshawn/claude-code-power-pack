@@ -21,7 +21,7 @@ Example — the commit-message skill in full:
 Also in the pack: a multi-agent code review workflow — splits review by dimension (correctness/security/perf) across parallel agents, then adversarially verifies every finding before reporting it. Fewer false positives than one agent reviewing everything.
 
 **5/**
-$19, zip download, works with your existing Claude Code install.
+$15, zip download, works with your existing Claude Code install.
 
 [Stripe link]
 

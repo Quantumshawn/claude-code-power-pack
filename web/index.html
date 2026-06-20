@@ -5,55 +5,107 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Claude Code Power Pack — Skills, Hooks & Multi-Agent Workflows</title>
 <meta name="description" content="6 custom skills, 5 hook recipes, 3 multi-agent workflow scripts, and permission templates for Claude Code. Copy-paste and start using in under 10 minutes.">
+<meta property="og:title" content="Claude Code Power Pack">
+<meta property="og:description" content="6 custom skills, 5 hook recipes, 3 multi-agent workflows, and permission templates for Claude Code. $15, instant download.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
+
+<div class="noise"></div>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#top">
+      <span class="brand-dot"></span>
+      Power Pack
+    </a>
+    <div class="nav-links">
+      <a href="#features">What's inside</a>
+      <a href="#preview">Preview</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="buy buy-small" href="https://buy.stripe.com/7sY7sD4Yr8nL7Pg1TJ3cc00">Buy — $15</a>
+  </div>
+</nav>
+
+<main id="top">
+
   <header class="hero">
+    <div class="hero-glow"></div>
     <p class="kicker">For Claude Code power users</p>
-    <h1>Claude Code Power Pack</h1>
-    <p class="sub">6 custom skills, 5 hook recipes, 3 multi-agent workflows, and permission templates — copy-paste and start using in under 10 minutes.</p>
-    <a class="buy" href="https://buy.stripe.com/7sY7sD4Yr8nL7Pg1TJ3cc00">Get it for $19 →</a>
-    <p class="fineprint">Instant download after payment. One-time purchase, no subscription.</p>
+    <h1>Stop re-explaining<br>your standards <span class="accent-text">every session.</span></h1>
+    <p class="sub">6 custom skills, 5 hook recipes, 3 multi-agent workflows, and permission templates for Claude Code — copy-paste and start using in under 10 minutes.</p>
+    <div class="hero-actions">
+      <a class="buy buy-large" href="https://buy.stripe.com/7sY7sD4Yr8nL7Pg1TJ3cc00">Get the Power Pack — $15 →</a>
+      <a class="secondary-link" href="#preview">See a free skill first ↓</a>
+    </div>
+    <ul class="trust-row">
+      <li>Instant, automated download</li>
+      <li>One-time payment, no subscription</li>
+      <li>Built from real daily use</li>
+    </ul>
   </header>
 
   <section class="pitch">
-    <p>If you're using Claude Code daily, you've probably re-typed the same instructions a dozen times — "write a good commit message," "don't pad the PR description," "actually verify the test passes." This pack turns the ones that actually stick into reusable skills, so you stop re-explaining your standards every session.</p>
+    <p>If you're using Claude Code daily, you've probably re-typed the same instructions a dozen times — <em>"write a good commit message,"</em> <em>"don't pad the PR description,"</em> <em>"actually verify the test passes."</em> This pack turns the ones that actually stick into reusable skills, so you stop re-explaining your standards every session.</p>
   </section>
 
-  <section class="contents">
-    <h2>What's inside</h2>
+  <section class="contents" id="features">
+    <div class="section-head">
+      <p class="eyebrow">What's inside</p>
+      <h2>Everything you need to level up your setup</h2>
+    </div>
     <div class="grid">
       <div class="card">
+        <div class="card-icon">⚙</div>
         <h3>6 custom skills</h3>
         <p>changelog-writer, pr-description, commit-message, test-generator, bug-repro, refactor-planner. Each encodes the actual judgment calls — when to split a commit, when a test tests nothing, when a "refactor" is secretly a behavior change.</p>
       </div>
       <div class="card">
+        <div class="card-icon">⤳</div>
         <h3>5 hook recipes</h3>
         <p>Auto-format on every edit, block edits to lockfiles/CI config, desktop notifications when Claude needs you, a pre-commit test gate, command audit logging. Copy-paste into <code>.claude/settings.json</code>.</p>
       </div>
       <div class="card">
+        <div class="card-icon">◈</div>
         <h3>3 multi-agent workflows</h3>
         <p>Parallel code review with adversarial verification, loop-until-dry bug hunting with a 3-lens judge panel, and a discover→transform→verify migration workflow with worktree isolation.</p>
       </div>
       <div class="card">
+        <div class="card-icon">🔒</div>
         <h3>Permission templates</h3>
         <p>Sane starting allowlists for Node, Python, and Go projects — instead of a blank <code>.claude/settings.json</code> or an over-broad one.</p>
       </div>
       <div class="card">
+        <div class="card-icon">📋</div>
         <h3>Cheat sheet</h3>
         <p>One page covering the permission model, when to reach for a subagent vs. a full workflow, and CLAUDE.md hygiene.</p>
       </div>
       <div class="card">
+        <div class="card-icon">✓</div>
         <h3>Built from real use</h3>
         <p>Not a prompt-pack reseller bundle. Every file is something that's actually been used in real projects, not generated to fill out a list.</p>
       </div>
     </div>
   </section>
 
-  <section class="example">
-    <h2>One full skill, free, so you can judge the quality</h2>
-    <pre><code>---
+  <section class="example" id="preview">
+    <div class="section-head">
+      <p class="eyebrow">No surprises</p>
+      <h2>One full skill, free, so you can judge the quality</h2>
+    </div>
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+        <span class="terminal-title">.claude/skills/commit-message/SKILL.md</span>
+      </div>
+      <pre><code>---
 name: commit-message
 description: Write a precise, conventional commit message for the currently staged changes.
 ---
@@ -68,12 +120,63 @@ description: Write a precise, conventional commit message for the currently stag
    scattered, say so and recommend splitting.
 5. Match the repo's existing convention (check git log) over this
    template if they conflict.</code></pre>
-    <p class="fineprint">Drop that in <code>.claude/skills/commit-message/SKILL.md</code> and it just works. The pack has 5 more like it.</p>
+    </div>
+    <p class="fineprint center">Drop that in <code>.claude/skills/commit-message/SKILL.md</code> and it just works. The pack has 5 more like it.</p>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="price-card">
+      <p class="eyebrow">One-time purchase</p>
+      <div class="price-row">
+        <span class="price-amount">$15</span>
+        <span class="price-period">/ once, forever</span>
+      </div>
+      <ul class="price-list">
+        <li>6 custom skills</li>
+        <li>5 hook recipes</li>
+        <li>3 multi-agent workflow scripts</li>
+        <li>Node / Python / Go permission templates</li>
+        <li>One-page cheat sheet</li>
+        <li>Instant, automated download</li>
+      </ul>
+      <a class="buy buy-large full-width" href="https://buy.stripe.com/7sY7sD4Yr8nL7Pg1TJ3cc00">Get the Power Pack →</a>
+      <p class="fineprint center">Secure checkout via Stripe. Not happy? Reply to your receipt email for a refund.</p>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="section-head">
+      <p class="eyebrow">FAQ</p>
+      <h2>Good to know</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>What do I need to use this?</summary>
+        <p>Just an existing Claude Code install. Drop the files into your project's <code>.claude/</code> folder (or your global config to use them everywhere) — no extra dependencies, no build step.</p>
+      </details>
+      <details>
+        <summary>Is this affiliated with Anthropic?</summary>
+        <p>No. This is an independent pack built by a Claude Code user, for Claude Code users. Not affiliated with or endorsed by Anthropic.</p>
+      </details>
+      <details>
+        <summary>How does delivery work?</summary>
+        <p>After checkout, Stripe redirects you to a page that verifies your payment and gives you an instant zip download. No waiting, no manual email.</p>
+      </details>
+      <details>
+        <summary>Will this work with future Claude Code versions?</summary>
+        <p>The skills and workflows are plain markdown/JS and should keep working as-is. A couple of hook recipes reference specific event names that can shift between Claude Code releases — those are flagged in the docs so you know what to double check if one doesn't fire.</p>
+      </details>
+      <details>
+        <summary>Can I use this on a team?</summary>
+        <p>Yes — personal and team use is covered. Just don't repackage and resell the pack itself.</p>
+      </details>
+    </div>
   </section>
 
   <footer class="cta">
-    <a class="buy" href="https://buy.stripe.com/7sY7sD4Yr8nL7Pg1TJ3cc00">Get the full pack for $19 →</a>
+    <a class="buy buy-large" href="https://buy.stripe.com/7sY7sD4Yr8nL7Pg1TJ3cc00">Get the full pack for $15 →</a>
     <p class="fineprint">Zip download. Personal/team use. Instant, automated delivery after payment.</p>
+    <p class="fineprint muted">Not affiliated with or endorsed by Anthropic.</p>
   </footer>
 </main>
 </body>
